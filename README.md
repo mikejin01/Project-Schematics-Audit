@@ -6,4 +6,4 @@ and report which ones are missing it.
 ## Usage
 
 ```bash
-python3 check_schematics.py
+python3 schematics_checker.py
