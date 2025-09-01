@@ -4,7 +4,7 @@
 
 import os
 
-#define the root project folder
+#define the root folder where all project folders reside
 projects_root = os.getcwd() + "/Sample Data"
 #define the target file name
 target_name="Schematics.jpg"
