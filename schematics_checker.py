@@ -18,16 +18,16 @@ def find_missing_schematics(projects_root, target_name):
     missing = {}
 
     # Loop through each item in the root folder
-    for folder in os.listdir(projects_root):
-        full_path = os.path.join(projects_root, folder)
-        print("Checking " + folder)
-        # Check if folder is a directory, we will pass for non-directories
+    for item in os.listdir(projects_root):
+        full_path = os.path.join(projects_root, item)
+        print("Checking " + item)
+        # Check if item is a directory, we will pass for non-directories
         if os.path.isdir(full_path):
             target_path = os.path.join(full_path, target_name)
             #print("checking if "+target_path+" exists")
             # If schematics.jpg is not found, record it
             if not os.path.exists(target_path):
-                missing[folder] = full_path
+                missing[item] = full_path
     return missing
 
 def print_report(missing_dict):
